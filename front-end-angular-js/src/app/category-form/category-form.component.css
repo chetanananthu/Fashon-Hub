@@ -1,0 +1,38 @@
+.category-form {
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .container{
+      background-color:lightpink;
+      height: 100vh;
+      display: flex;
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqM50xHIYvA2-KuVBdYRy-TQ8vVaouXph0_g&s");
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  

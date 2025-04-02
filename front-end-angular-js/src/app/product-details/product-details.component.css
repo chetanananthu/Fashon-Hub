@@ -1,0 +1,33 @@
+.image{
+    width: 600px;
+    height: 500px;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.details{
+    width: 700px;
+}
+
+.productDetails{
+    text-align: center;
+}
+
+.name{
+    font-size: 30px;
+    font-family:'Poppins', sans-serif;
+    margin-bottom: 0%;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+

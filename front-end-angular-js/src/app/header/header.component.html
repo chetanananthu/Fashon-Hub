@@ -1,0 +1,18 @@
+<app-admin-navbar *ngIf="role === 'admin' else user" ></app-admin-navbar>
+ <ng-template #user>
+    <app-navbar></app-navbar>
+ </ng-template>
+<div class="slideshow-container">
+    <div *ngFor="let slide of slides; let i = index" class="mySlides fade" [ngClass]="{'active': currentIndex === i}">
+      <div class="numbertext">{{i + 1}} / {{slides.length}}</div>
+      <img class="slide-image" [src]="slide.image">
+      <div class="text">{{slide.caption}}</div>
+    </div>
+  
+    <a class="prev" (click)="changeSlide(-1)">&#10094;</a>
+    <a class="next" (click)="changeSlide(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span *ngFor="let slide of slides; let i = index" class="dot" [ngClass]="{'active': currentIndex === i}" (click)="setSlide(i)"></span>
+  </div>

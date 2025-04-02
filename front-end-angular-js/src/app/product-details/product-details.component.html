@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="images">
+    <img class="image" src="{{product.image}}" alt="Product Image">
+  </div>
+  <div class="details">
+    <div class="productDetails">
+      <p class="name">{{ product.name }}</p>
+      <p>{{ product.description }}</p>
+      <h1>₹{{ product.price }}</h1>
+    </div>
+    <div class="buttons">
+      <button *ngIf="!showGoToCartButton" 
+              (click)="addToCart(product._id, 1, product.price); $event.stopPropagation()">
+        🛒 Add to Cart
+      </button>
+      
+      <button *ngIf="showGoToCartButton" 
+              (click)="goToCart(); $event.stopPropagation()">
+        🛍️ Go to Cart
+      </button>
+
+      <button (click)="addToWishlist(product._id); $event.stopPropagation()">
+        {{ wishlist.has(product._id) ? '❤️ Remove from Wishlist' : '🤍 Add to Wishlist' }}
+      </button>
+    </div>
+  </div>
+</div>

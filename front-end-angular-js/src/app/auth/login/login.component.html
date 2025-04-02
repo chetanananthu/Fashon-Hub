@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="login-form">
+<form [formGroup]="loginForm" class="labels" (ngSubmit)="onSubmit()">
+    <label>Email:</label><br>
+    <input type="email" formControlName="email" placeholder="Enter your email"><br>
+    <p style="color:red" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"> Please enter a valid email address.</p>
+    <label >Password:</label> <br> 
+    <input type="password" formControlName="password" placeholder="Enter Password"><br>
+    <p style="color:red" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"> Please enter a valid password</p>
+    <div class="submit" type="submit"><button>Login</button></div>
+</form>
+</div>

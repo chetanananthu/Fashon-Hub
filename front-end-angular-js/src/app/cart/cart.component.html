@@ -1,0 +1,51 @@
+<!-- Check if cart exists and has products -->
+<app-navbar></app-navbar>
+<div class="cartContainer" *ngIf="products.length>0; else empty">
+    <table class="cartTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Product Name</th>
+                <th>Cost</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td><img [src]="product.image" alt="Product Image"></td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <input type="number" [(ngModel)]="product.quantity" (change)="updateQuantity(product)">
+                </td>
+                <td>{{ product.price * product.quantity }}</td>
+                <td><button (click)="deleteCart(product._id)">Remove</button></td>
+            </tr>
+            <tr>
+                <td> <button (click)="continueShopping()">Continue Shopping</button></td>
+                <td colspan="3"></td>
+                <td ><strong>{{ getTotalAmount() }}</strong></td>
+                <td><button (click)="proceedToPayment()" style="background-color:blue; color: white;">Proceed to CheckOut</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #empty>
+    <div class="empty-cart-message">
+        <h3>There are no items in the cart. Add items to order.</h3>
+    </div>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+

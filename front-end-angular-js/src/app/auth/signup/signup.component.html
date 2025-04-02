@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="signupform">
+    <form [formGroup]="signupForm" class="labels" (ngSubmit)="onSubmit()">
+        <label>Email:</label><br>
+        <input type="email" formControlName="email" placeholder="Enter your email"><br>
+        <p style="color:red" *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched"> Please enter a valid email address.</p>
+        <label >Password:</label> <br> 
+        <input type="password" formControlName="password" placeholder="Enter Password"><br>
+        <p style="color:red" *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"> Please enter a valid password</p>
+        <div class="submit" type="submit"><button>Signup</button></div>
+    </form>
+    </div>
+    

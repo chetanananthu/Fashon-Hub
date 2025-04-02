@@ -1,0 +1,12 @@
+<div class="navbar">
+    <div class="heading11">
+        <a class="heading" [routerLink]="['/']">Fashion-Hub</a>
+    </div>
+    <a *ngIf="role===null" [routerLink]="['/login']" >Login</a>
+    <a *ngIf="role===null" [routerLink]="['/signup']">Signup</a>
+    <a [routerLink]="['/cart', userId]"><img class="cartImage" src="assets/shopping-cart.png"></a>
+    <a (click)="wishlist()"><img class="cartImage" src="assets/icons8-heart-32.png"></a>
+    <a class="logout" *ngIf="role!==null"(click)="onLogOut()">Logout</a>
+</div>
+
+<app-toolbar></app-toolbar>

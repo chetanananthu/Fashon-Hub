@@ -1,0 +1,68 @@
+.navbar {
+    background-color: #0f1111;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* width: 90%; */
+}
+.h2 {
+    background-color: lightblue;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    /* width: 100%; */
+}
+
+.heading {
+    color: white;
+    font-size: 30px;
+    flex: 1;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;  /* Optional: removes underline */
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #1f1f1f;  /* Optional: adds a hover effect */
+}
+
+.logout{
+    border: none;
+    color: white;
+    padding: 1%;
+    background-color: #0f1111;
+}
+
+.logout :hover{
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+button :hover{
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.heading11{
+    flex: 1;
+}
+
+.cartImage{
+    width: 100%;
+    height: 30px;
+    padding: 10%;
+    border: white;
+}
+button{
+    background-color:black;
+    border: none;
+}

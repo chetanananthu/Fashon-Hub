@@ -1,0 +1,55 @@
+<app-admin-navbar *ngIf="role === 'admin' else user"></app-admin-navbar>
+<ng-template #user>
+    <app-navbar></app-navbar>
+</ng-template>
+
+<div class="sidebar-listing">
+    
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <!-- Categories Section -->
+            <h5 class="toggle-heading" (click)="toggleCategories()">Categories <span>&#9662;</span></h5>
+            <ul class="list-group" *ngIf="categoriesExpanded">
+                <li *ngFor="let category of categories" class="list-group-item">
+                    <input type="checkbox" (change)="onCategoryChange(category._id, $event)"> {{ category.name }}
+                </li>          
+            </ul>
+        
+            <!-- Brands Section -->
+            <h5 class="toggle-heading mt-3" (click)="toggleBrands()">Brands <span>&#9662;</span></h5>
+            <ul class="list-group" *ngIf="brandsExpanded">
+                <li *ngFor="let brand of brands" class="list-group-item">
+                    <input type="checkbox" (change)="onBrandChange(brand._id, $event)"> {{ brand.name }}
+                </li>
+            </ul>
+        
+            <!-- Price Range Section -->
+            <h5 class="toggle-heading mt-3" (click)="togglePrice()">Price <span>&#9662;</span></h5>
+            <ul class="list-group" *ngIf="priceExpanded">
+                <li *ngFor="let price of priceRanges" class="list-group-item">
+                    <input type="checkbox" (change)="onPriceChange(price, $event)"> {{ price }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Listing -->
+    <div class="listing">
+      <div *ngFor="let product of updatedProducts; let i = index" 
+         class="card" 
+         style="text-decoration: none; color: inherit;">
+         <div class="remove">
+          <button *ngIf="role==='admin'" (click)="deleteProduct(product._id)"><img src="../../assets/remove.png" ></button>
+         </div>
+         <a [routerLink]="['/product', product._id]">
+          <img [src]="product.image" alt="{{ product.name }}" class="image">
+        </a>
+          <div class="card-content">
+              <h2 class="title">{{ product.name }}</h2>
+              <p class="price">Price: ${{ product.price }}</p>
+          </div>
+        </div>
+  </div>
+
+</div>

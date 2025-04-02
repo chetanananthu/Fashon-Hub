@@ -1,0 +1,61 @@
+.brand-form {
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container{
+    background-color:lightpink;
+    height: 100vh;
+    display: flex;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqM50xHIYvA2-KuVBdYRy-TQ8vVaouXph0_g&s");
+}
+  
+  .brand-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .brand-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .brand-form input,
+  .brand-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .brand-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .brand-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .brand-form button:hover {
+    background-color: #218838;
+  }
+  

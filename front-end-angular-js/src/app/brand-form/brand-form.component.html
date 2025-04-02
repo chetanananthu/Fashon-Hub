@@ -1,0 +1,18 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+<div class="brand-form">
+    <h2>Add Brand</h2>
+    <form (ngSubmit)="addBrand()">
+      <div>
+        <label for="name">Brand Name:</label>
+        <input type="text" id="name" [(ngModel)]="brand.name" name="name" required />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="brand.description" name="description"></textarea>
+      </div>
+      <button type="submit">Add Brand</button>
+    </form>
+  </div>
+</div>
+  

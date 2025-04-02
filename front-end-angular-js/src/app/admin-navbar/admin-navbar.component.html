@@ -1,0 +1,8 @@
+<div class="navbar">
+<a class="heading" [routerLink]="['/']">Fashion-Hub</a>
+<a  [routerLink]="['/category']">Category</a>
+<a  [routerLink]="['/brand']">Brand</a>
+<a  [routerLink]="['/products']">Products</a>
+<button *ngIf="role!==null"(click)="onLogOut()">Logout</button>
+</div>
+<app-toolbar></app-toolbar>

@@ -1,0 +1,16 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+<div class="category-form">
+    <h2>Add Category</h2>
+    <form (submit)="addCategory()">
+      <label for="name">Category Name:</label>
+      <input type="text" id="name" [(ngModel)]="category.name" name="name" required>
+  
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="category.description" name="description"></textarea>
+  
+      <button type="submit">Add Category</button>
+    </form>
+  </div>
+</div>
+  

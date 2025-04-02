@@ -1,0 +1,46 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Ensures it covers the full viewport */
+    background-color: rebeccapurple;
+    width: 100%;  /* Ensures it covers full width */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqM50xHIYvA2-KuVBdYRy-TQ8vVaouXph0_g&s");
+}
+
+/* Ensure form is centered properly */
+.labels {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label{
+    text-align: left;
+    font-size: large;
+}
+
+button{
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    background-color: blue;
+    color: white;
+}
+
+.submit{
+    flex-direction: column;
+    text-align: center;
+}

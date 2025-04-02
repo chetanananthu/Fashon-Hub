@@ -1,0 +1,16 @@
+ <!-- Product Listing -->
+ <div class="listing">
+    <div *ngFor="let product of products; let i = index" 
+       class="card" 
+       style="text-decoration: none; color: inherit;">
+       <div class="remove">
+        <button><img src="../../assets/remove.png" ></button>
+       </div>
+        <img [src]="product.image" alt="{{ product.name }}" class="image">
+        <div class="card-content">
+            <h2 class="title">{{ product.name }}</h2>
+            <p class="price">Price: ${{ product.price }}</p>
+        </div>
+      </div>
+</div>
+
